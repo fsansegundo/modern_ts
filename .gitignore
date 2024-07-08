@@ -140,9 +140,16 @@ cython_debug/
 data/
 #Exclude imgs folder
 imgs/
+#Exclude api_keys folder
+api_keys/
 
 test.py
 .pt_tmp/
 notebooks/Chapter13/ft_transformer_global/
 lightning_logs/
 notebooks/Chapter16/saved_weights
+
+# Mac
+.DS_Store
+
+.DS_Store

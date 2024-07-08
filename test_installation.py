@@ -4,9 +4,16 @@ import pandas as pd
 df = pd.DataFrame(x)
 import torch
 d = torch.zeros(3)
-print(
+""" print(
     f"GPU: {torch.cuda.is_available()} | # of GPU: {torch.cuda.device_count()}| Default GPU Name: {torch.cuda.get_device_name(0)}"
-)
+) """
+import torch
+if torch.backends.mps.is_available():
+    mps_device = torch.device("mps")
+    x = torch.ones(1, device=mps_device)
+    print (x)
+else:
+    print ("MPS device not found.")
 import matplotlib.pyplot as plt
 import plotly.express as px
 import os
